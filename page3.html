@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="website.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Valentines</title>
+  <style>
+  .flower-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.love-text {
+  font-size: 5rem;
+  color: #ff4d6d;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  z-index: 5;
+}
+
+.valentines-text,
+.love-text,
+.letter-card h1 {
+  font-size: clamp(2rem, 10vw, 5rem); /* scales with viewport width */
+}
+
+</style>
+</head>
+<body>
+  <div class="hint">Kanye PEAK</div>
+  <div class="flower-page">
+  <h1 class="love-text">I LOVE YOUUUUU!!</h1>
+  <div class="flowers-container"></div>
+</div>
+<a href="page3.html"><button class="learn-more">Next ➤</button></a>
+<a href="page4.html"><button class="learn-more btt2">Back </button></a>
+<audio id="bg-music" loop><source src="Kanye West - Bound 2 (audio).mp3" type="audio/mpeg"></audio>
+<script src="script.js"></script>
+</body>
+</html>

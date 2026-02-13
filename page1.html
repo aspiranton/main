@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="website.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Valentines</title>
+  <style>
+  body {
+    margin: 0;
+    color: white;
+    font-family: 'Outfit', Arial;
+    background-color: rgb(229, 239, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+ }
+.time-together {
+  position: relative;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ff4d6d;
+  text-align: center;
+  z-index: 5;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.time-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ff4d6d;
+  padding: 40px 60px;
+  border-radius: 25px;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  z-index: 5;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.mini-heart {
+  position: relative;
+  color: #ff6f91;
+  animation: floatUp 3s infinite;
+  display: inline-block;
+  margin: 0 3px;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-30px); opacity: 0; }
+}
+
+
+.time-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#timeEl {
+  font-size: 4rem; 
+  font-weight: 700;
+  color: #ff4d6d;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+}
+
+.time-card p#days-together {
+  font-size: 4rem;   /* BIG, centerpiece */
+  margin: 15px 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+  color: #ff4d6d;
+}
+
+.time-card p:last-child {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #ff6f91;
+}
+
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="hearts"></div> 
+  <audio id="bg-music" loop>
+  <source src="Kendrick Lamar, SZA - luther (Lyrics).mp3" type="audio/mpeg">
+  </audio>
+  <div class="hint">luther by sza eats btw 🤓</div>
+  <div class="time-card">
+  <h1> We've been together<span class="mini-heart"></span></h1>
+  <p id="timeEl">0d 0h</p>
+  <p>and every second with you is perfect</p>
+</div>
+<a href="page2.html"><button class="learn-more">Next ➤</button></a>
+<a href="website.html"><button class="learn-more btt2">Back </button></a>
+<script src="script.js"></script>
+</body>
+</html>

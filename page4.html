@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why I Love You</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: #ff4d6d;
+  margin-bottom: 100px;
+}
+
+.reason {
+  max-width: 700px;
+  margin: 120px auto;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: #ff6f91;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+  line-height: 1.6;
+}
+
+.reason.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.buttons {
+  margin-top: 120px;
+}
+
+button {
+ position: fixed;
+bottom: 20px;
+right: 20px;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ font-family: inherit;
+ font-size: 15px;
+}
+
+button.learn-more {
+ font-weight: 600;
+ color: #382b22;
+ text-transform: uppercase;
+ padding: 1.25em 2em;
+ background: #fff0f0;
+ border: 2px solid #b18597;
+ border-radius: 0.75em;
+ -webkit-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+ -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: #f9c4d2;
+ border-radius: inherit;
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.75em, -1em);
+ transform: translate3d(0, 0.75em, -1em);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+ background: #ffe9e9;
+ -webkit-transform: translate(0, 0.25em);
+ transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.5em, -1em);
+ transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+ background: #ffe9e9;
+ -webkit-transform: translate(0em, 0.75em);
+ transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0, -1em);
+ transform: translate3d(0, 0, -1em);
+}
+
+.btt2 {
+  left: 20px;
+  right: auto;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+.heart {
+  position: absolute;
+  color: #ff4d6d;
+  font-size: 14px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+.hint {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Reasons why I Love You </h1>
+
+  <div class="reason">Your smile genuinely brightens up my entire day</div>
+  <div class="reason">Talking to you makes me realise how lucky i am to have you</div>
+  <div class="reason">Your the best gf i could've ever asked for</div>
+  <div class="reason">The last 8 months with you have been the best 8 months of my life</div>
+  <div class="reason">and you look like a monkey 😂 nah but genuinely tho i could've made this list go on forever, i just love you</div>
+
+  <div class="buttons">
+    <a href="page3.html"><button class="learn-more">Next ➤</button></a>
+    <a href="page2.html"><button class="learn-more btt2">Back </button></a>
+  </div>
+</div>
+<div class="hearts"></div> 
+  <audio id="bg-music" loop>
+    <source src="Kanye West - Bound 2 (audio).mp3" type="audio/mpeg">
+  </audio>
+  <div class="hint">ai back to the GOAT</div> 
+
+<script>
+const reasons = document.querySelectorAll('.reason');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+reasons.forEach(reason => {
+  observer.observe(reason);
+});
+
+    const heartsContainer = document.querySelector('.hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤';
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 5) + 's';
+      heart.style.fontSize = (10 + Math.random() * 10) + 'px';
+
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    setInterval(createHeart, 300);
+
+    document.addEventListener('click', () => {
+    document.getElementById('bg-music').play();
+  }, { once: true });
+
+  const music = document.getElementById('bg-music');
+music.volume = 0;
+
+music.play();
+let v = 0;
+const fade = setInterval(() => {
+  if (v < 0.6) {
+    v += 0.01;
+    music.volume = v;
+  } else {
+    clearInterval(fade);
+  }
+}, 100);
+
+
+const startDate = new Date("2025-06-13T13:32:00");
+const timeEl = document.getElementById("timeEl");
+
+function updateTime() {
+  const now = new Date();
+  
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - startDate.getMonth();
+  let days = now.getDate() - startDate.getDate();
+
+  if (days < 0) {
+    months -= 1;
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0); 
+    days += prevMonth.getDate();
+  }
+
+  if (months < 0) {
+    months += 12;
+    years -= 1;
+  }
+
+  const totalMonths = years * 12 + months;
+
+  timeEl.textContent = `${totalMonths} months ${days} days`;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+
+const envelope = document.getElementById('envelope');
+envelope.addEventListener('click', () => {
+  envelope.classList.toggle('open');
+});
+
+
+</script>
+
+</body>
+</html>

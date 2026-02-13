@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="website.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Valentines</title>
+  <style>
+.valentines-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(3rem, 10vw, 5rem); 
+  text-align: center;
+  font-weight: 900;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+  z-index: 5;
+}
+
+.hint {
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  padding: clamp(0.3em, 1vw, 0.6em) clamp(0.6em, 2vw, 1em);
+}
+  </style>
+</head>
+<body>
+  <div class="hearts"></div>
+  <script src="script.js"></script>
+  <audio id="bg-music" loop>
+  <source src="Kanye West - Bound 2 (audio).mp3" type="audio/mpeg">
+  </audio>
+  <div class="hint">click here WE love Kanye</div>
+  <a href="page1.html"><button class="learn-more">Next ➤</button></a>
+  <h1 class="valentines-text">Happy Valentine’s Day Princess! </h1>
+</body>
+</html>
